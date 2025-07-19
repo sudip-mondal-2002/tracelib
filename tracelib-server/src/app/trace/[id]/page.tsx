@@ -113,4 +113,4 @@ function buildTraceTree(traces: TraceEvent[]): TreeNode | null {
 }
 
 
-
+export const dynamic = 'force-dynamic'
