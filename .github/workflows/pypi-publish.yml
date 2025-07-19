@@ -36,9 +36,9 @@ jobs:
             python-version: 3.11
 
       - name: Build package
-        run: uv build --out-dir /github/workflows/dist
+        run: uv build
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages-dir: dist/
+          packages-dir: tracelib-python/dist/
