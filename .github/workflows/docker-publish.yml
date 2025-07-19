@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - "tracelib-server"
+  workflow_dispatch:
+
 
 jobs:
   build-docker:
