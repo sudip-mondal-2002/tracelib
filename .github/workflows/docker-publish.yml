@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "tracelib-server"
+      - "tracelib-server/**"
   workflow_dispatch:
 
 

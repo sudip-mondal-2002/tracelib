@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "tracelib-python"
+      - "tracelib-python/**"
   workflow_dispatch:
 
 permissions:

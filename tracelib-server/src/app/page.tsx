@@ -1,6 +1,7 @@
 import prisma from '@/utils/prisma';
 import { Box } from '@mui/material';
 import TraceRow from "@/components/TraceRow";
+import {TraceEvent} from "@prisma/client";
 
 export default async function Home() {
     const traces = await prisma.traceEvent.findMany({
@@ -14,7 +15,7 @@ export default async function Home() {
     return (
         <Box>
             {
-                traces.map(trace => (
+                traces.map((trace: TraceEvent) => (
                     <TraceRow
                         key={trace.id}
                         traceId={trace.id}
