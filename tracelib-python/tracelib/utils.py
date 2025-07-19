@@ -3,6 +3,7 @@ import logging
 import os
 import aiohttp
 from .core import SafeEncoder
+import json
 
 TRACING_SERVER = os.getenv("TRACING_SERVER", "http://localhost:3000/api/traces")
 QUEUE_MAX_SIZE = int(os.getenv("TRACE_QUEUE_SIZE", "1000"))

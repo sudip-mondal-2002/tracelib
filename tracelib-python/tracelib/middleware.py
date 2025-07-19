@@ -4,6 +4,8 @@ import uuid
 from fastapi import Request, Response
 from .core import tracing_context, current_span, safe_serialize
 from .utils import event_queue
+import logging
+import json
 
 async def tracing_middleware(request: Request, call_next) -> Response:
     request_id = request.headers.get('X-Request-ID', str(uuid.uuid4()))
