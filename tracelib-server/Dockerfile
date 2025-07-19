@@ -1,5 +1,5 @@
 # Use lighter weight runner
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 
 # Add dumb-init for better signal handling
 RUN apk add --no-cache dumb-init
