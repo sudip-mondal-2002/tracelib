@@ -8,7 +8,7 @@ import DetailView from "@/components/DetailView";
 
 
 export default async function TracePage({ params }: never) {
-    const { id } = params;
+    const { id  } = await params;
     const currentTrace = await prisma.traceEvent.findUnique({
         where: { id },
     });
