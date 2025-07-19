@@ -1,0 +1,36 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model TraceEvent {
+  id             String   @id @default(uuid())
+  requestId      String   @map("request_id")
+  parentId       String?  @map("parent_id")
+  type           String
+  name           String?
+  module         String?
+  function       String?
+  start          Float?
+  end            Float?
+  duration       Float?
+  statusCode     Int?     @map("status_code")
+  level          String?
+  message        String?
+  args           Json?
+  kwargs         Json?
+  result         Json?
+  error          String?
+  exceptionType  String?  @map("exception_type")
+  exception      Json?
+  timestamp      Float?
+
+  @@index([requestId])
+  @@index([timestamp])
+  @@index([type])
+}

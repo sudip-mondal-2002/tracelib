@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tracelib"
+version = "0.1.0"
+description = "Distributed tracing library"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    {name = "Sudip Mondal", email = "sudmondal2002@gmail.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+]
+keywords = ["tracing", "logging", "monitoring"]
+dependencies = [
+    "aiohttp>=3.8.0",
+]
+
+[project.optional-dependencies]
+fastapi = ["fastapi>=0.68.0"]
+dev = [
+    "pytest>=6.0",
+    "black",
+    "mypy",
+    "flake8",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/tracelib"
+Documentation = "https://github.com/yourusername/tracelib#readme"
+Issues = "https://github.com/yourusername/tracelib/issues"
