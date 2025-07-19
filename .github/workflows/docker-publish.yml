@@ -35,6 +35,7 @@ jobs:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres
         run: |
           npm ci
+          npx prisma migrate reset
           npx prisma generate
           npm run build
       - uses: docker/metadata-action@v5
