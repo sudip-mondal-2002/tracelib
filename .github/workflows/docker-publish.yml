@@ -26,6 +26,7 @@ jobs:
         working-directory: ${{ env.NEXTJS_DIR }}
         run: |
           npm ci
+          npx prisma generate
           npm run build
       - uses: docker/metadata-action@v5
         id: meta
